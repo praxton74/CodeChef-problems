@@ -1,0 +1,31 @@
+t=(int(input()))
+while(t):
+    n=int(input())
+    s=list(input())
+    zero=0
+    one=0
+    if(n%2==0):
+        for i in s:
+            if(i=='1'):
+                one=one+1
+            elif(i=='0'):
+                zero=zero+1
+        if(one%2==0 and zero%2==0):
+            print("Yes")
+        elif(one==zero):
+            print("Yes")
+        else:
+            print("No")
+        
+    else:
+        for i in s:
+            if(i=='1'):
+                one=one+1
+            elif(i=='0'):
+                zero=zero+1
+        if(one%2==0 or zero%2==0):
+            print("Yes")
+        else:
+            print("No")
+    
+    t-=1
